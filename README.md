@@ -61,7 +61,9 @@ sudo apt install qemu-system-x86 qemu-utils qemu-kvm virt-manager -y
 # Verificación de la instalación
 qemu-system-x86_64 --version
 ```
-## Creación de Máquina Virtual
+### Imagenes de instalacion 
+
+## 3. Creación de Máquina Virtual
 # Crear disco virtual de 20GB
 ```
 qemu-img create -f qcow2 centos_disk.qcow2 20G
@@ -79,7 +81,7 @@ qemu-system-x86_64 \
     -netdev user,id=net0 \
     -device virtio-net-pci,netdev=net0}
 ```
-## Características de QEMU Implementadas
+## 4. Características de QEMU Implementadas
 Virtualización completa de hardware
 
 Soporte para múltiples arquitecturas
@@ -89,8 +91,8 @@ Gestión de discos virtuales formatos qcow2/raw
 Redes virtuales configurables
 
 Interfaz gráfica y modo headless
-### 3. Análisis de Red con Nmap
-## Script de Escaneo Automatizado
+### Análisis de Red con Nmap
+## 5. Script de Escaneo Automatizado
 ```
 #!/bin/bash
 # scripts/nmap_analysis.sh
@@ -125,7 +127,7 @@ sudo nmap --script safe,vuln 192.168.1.1
 echo "5. ESCANEO DE PUERTOS 0-1000:"
 sudo nmap -p 0-1000 192.168.1.1
 ```
-## Comandos Nmap Explicados
+## 6. Comandos Nmap Explicados
 # Descubrimiento de Red
 ```
 nmap -sn 192.168.1.0/24
