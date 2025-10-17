@@ -62,6 +62,12 @@ sudo apt install qemu-system-x86 qemu-utils qemu-kvm virt-manager -y
 qemu-system-x86_64 --version
 ```
 ### Imagenes de instalacion 
+![Tare-5](1.jpg)  
+![Tare-5](2.jpg)  
+![Tare-5](3.jpg)  
+![Tare-5](4.jpg)  
+![Tare-5](5.jpg)  
+![Tare-5](6.jpg)  
 
 ## 3. Creación de Máquina Virtual
 # Crear disco virtual de 20GB
@@ -152,3 +158,8 @@ nmap --script safe 192.168.1.1
 Ejecuta scripts de seguridad
 
 Detecta configuraciones vulnerables
+
+### Imagens de prueba 
+![Tare-5](7.jpg)  
+![Tare-5](8.jpg)  
+
