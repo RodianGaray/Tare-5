@@ -63,9 +63,11 @@ qemu-system-x86_64 --version
 ```
 ## Creación de Máquina Virtual
 # Crear disco virtual de 20GB
+```
 qemu-img create -f qcow2 centos_disk.qcow2 20G
-
+```
 # Iniciar instalación de CentOS Stream
+```
 qemu-system-x86_64 \
     -hda centos_disk.qcow2 \
     -cdrom /ruta/CentOS-Stream-10-latest-x86_64-dvd1.iso \
@@ -75,7 +77,8 @@ qemu-system-x86_64 \
     -vga virtio \
     -display gtk \
     -netdev user,id=net0 \
-    -device virtio-net-pci,netdev=net0
+    -device virtio-net-pci,netdev=net0}
+```
 ## Características de QEMU Implementadas
 Virtualización completa de hardware
 
@@ -88,32 +91,40 @@ Redes virtuales configurables
 Interfaz gráfica y modo headless
 ### 3. Análisis de Red con Nmap
 ## Script de Escaneo Automatizado
+```
 #!/bin/bash
 # scripts/nmap_analysis.sh
 
 echo "=== ANÁLISIS COMPLETO DE RED ==="
 echo "Fecha: $(date)"
 echo
-
+```
 # Descubrimiento de hosts activos
+```
 echo "1. HOSTS ACTIVOS EN LA RED:"
 sudo nmap -sn 192.168.1.0/24
+```
 
 # Escaneo de puertos en gateway
+```
 echo "2. ESCANEO DE PUERTOS - ROUTER:"
 sudo nmap -sS -sV -p 22,53,80,443,8080 192.168.1.1
-
+```
 # Análisis de servicios locales
+```
 echo "3. ESCANEO LOCAL COMPLETO:"
 sudo nmap -sS -sV -sC -O localhost
-
+```
 # Detección de vulnerabilidades
+```
 echo "4. SCRIPTS DE SEGURIDAD:"
 sudo nmap --script safe,vuln 192.168.1.1
-
+```
 # Escaneo de todos los puertos
+```
 echo "5. ESCANEO DE PUERTOS 0-1000:"
 sudo nmap -p 0-1000 192.168.1.1
+```
 ## Comandos Nmap Explicados
 # Descubrimiento de Red
 ```
